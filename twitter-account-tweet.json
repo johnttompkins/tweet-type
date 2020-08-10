@@ -1,0 +1,62 @@
+{
+    "typeName": "Twitter::Account::Tweet",
+    "description": "Tweet resource type for provisioning out tweets with CloudFormation",
+    "sourceUrl": "https://github.com/aws-cloudformation/aws-cloudformation-rpdk.git",
+    "properties": {
+        "accessKey": {
+            "description": "Access key for interacting with twitter apis",
+            "type": "string"
+        },
+        "secretKey": {
+            "description": "Secret key for interacting with twitter apis",
+            "type": "string"
+        },
+        "consumerAccessKey": {
+            "description": "Secret key for interacting with twitter apis",
+            "type": "string"
+        },
+        "consumerSecretKey": {
+            "description": "Secret key for interacting with twitter apis",
+            "type": "string"
+        },
+        "tweet": {
+            "description": "Tweet to post",
+            "type": "string",
+            "maxLength": 140
+        },
+        "tweetId": {
+            "description": "tweet identifier",
+            "type": "string"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "tweet"
+    ],
+    "createOnlyProperties": [
+        "/properties/tweet"
+    ],
+    "writeOnlyProperties": [
+        "/properties/accessKey",
+        "/properties/secretKey",
+        "/properties/consumerAccessKey",
+        "/properties/consumerSecretKey"
+    ],
+    "readOnlyProperties": [
+        "/properties/tweetId"
+    ],
+    "primaryIdentifier": [
+        "/properties/tweetId"
+    ],
+    "handlers": {
+        "create": {
+            "permissions": []
+        },
+        "read": {
+            "permissions": []
+        },
+        "delete": {
+            "permissions": []
+        }
+    }
+}

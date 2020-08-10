@@ -1,0 +1,12 @@
+Parameters:
+  TweetParam:
+    Type: String
+Resources:
+  AGoodTweet:
+    Type: Twitter::Account::Tweet
+    Properties:
+      accessKey: '{{resolve:secretsmanager:prod/TwitterApp/myAccountDetails:SecretString:accessKey}}'
+      secretKey: '{{resolve:secretsmanager:prod/TwitterApp/myAccountDetails:SecretString:secretKey}}'
+      consumerAccessKey: '{{resolve:secretsmanager:prod/TwitterApp/myAccountDetails:SecretString:consumerAccessKey}}'
+      consumerSecretKey: '{{resolve:secretsmanager:prod/TwitterApp/myAccountDetails:SecretString:consumerSecretKey}}'
+      tweet: !Ref TweetParam
