@@ -1,9 +1,9 @@
-# Twitter::Account::Follow
+# Twitter::Account::Tweet
 
 Congratulations on starting development! Next steps:
 
-1. Write the JSON schema describing your resource, `twitter-account-follow.json`
-2. Implement your resource handlers in `twitter_account_follow/handlers.py`
+1. Write the JSON schema describing your resource, `twitter-account-tweet.json`
+2. Implement your resource handlers in `twitter_account_tweet/handlers.py`
 
 > Don't modify `models.py` by hand, any modifications will be overwritten when the `generate` or `package` commands are run.
 
